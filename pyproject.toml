@@ -1,0 +1,41 @@
+[project]
+name = "wsl-rtx5xxx"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "ipython>=9.4.0",
+    "sentence-transformers>=5.0.0",
+    "torch",
+    "torchaudio",
+    "torchvision",
+    "tqdm>=4.65",
+]
+
+[dependency-groups]
+rtx5090 = [
+    "torch>=2.9.0.dev20250709",
+    "torchaudio>=2.8.0.dev20250709",
+    "torchvision>=0.24.0.dev20250709",
+]
+rtx4090 = [
+    "torch>=2.0.0",
+    "torchaudio>=2.0.0",
+    "torchvision>=0.15.0",
+]
+rtx3090 = [
+    "torch>=2.0.0",
+    "torchaudio>=2.0.0",
+    "torchvision>=0.15.0",
+]
+rtx2080 = [
+    "torch>=2.0.0",
+    "torchaudio>=2.0.0",
+    "torchvision>=0.15.0",
+]
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/nightly/cu129"
+
